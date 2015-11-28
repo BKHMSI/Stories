@@ -1,0 +1,50 @@
+<div class="header">
+  <div class="container">
+    <img src="/assets/Doum_Logo.png" alt="Doum Logo">
+    <h1>Story</h1>
+  </div>
+</div>
+
+<script>
+function textCounter(txtFld){
+  var max = 200;
+  var countField = document.getElementById('remainingChars');
+  console.log(max - txtFld.value.length);
+  if (txtFld.value.length > max){
+    return false;
+  }else if(txtFld.value.length == 0){
+    countField.innerHTML = "";
+    document.getElementById('actionBtn').style.display = "none";
+    document.getElementById('backBtn').style.display = "block";
+  }
+  else{
+    document.getElementById('actionBtn').style.display = "block";
+    document.getElementById('backBtn').style.display = "none";
+    countField.innerHTML = "Remaining Charachters: \n " + (max - txtFld.value.length).toString();
+  }
+}
+</script>
+
+
+<div class="create">
+  <div class="msgsContainer">
+    <%= form_for(@message) do |f| %>
+    <div class="field">
+      <%= f.label :entry  %>
+      <%= f.hidden_field :story_id, :value => params[:story] %>
+      <%= f.text_area :content, :maxlength => 200, :onkeyup => "textCounter(this);" %>
+    </div>
+    <div class="actions">
+      <table width="100%">
+        <tr>
+          <td>
+            <span id="backBtn"><%= link_to 'Back', "/stories" %></span>
+            <span style="display: none;" id="actionBtn"><%= f.submit "Contribute"%></span>
+          </td>
+          <td><p style="float:right" id="remainingChars"></p></td>
+        </tr>
+      </table>
+    </div>
+    <% end %>
+  </div>
+</div>

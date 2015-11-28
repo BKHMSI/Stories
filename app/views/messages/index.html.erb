@@ -1,0 +1,65 @@
+<div class="header">
+  <div id="login">
+    <div><%= link_to 'Log In', "/login" %></div>
+  </div>
+  <div class="container">
+    <img src="/assets/Doum_Logo.png" alt="Doum Logo">
+    <h1>Story</h1>
+  </div>
+</div>
+
+<div class="add">
+  <%= link_to 'New Entry', "messages/new" %>
+</div>
+
+<div class="story">
+  <div class="container">
+    <%@messages.each_with_index do |entry, idx| %>
+    <%if((idx+1) % 2 == 0)%>
+    <table align="center" width="100%" cellpadding="5px" class="post">
+      <tr>
+        <td><div class="lPost">
+        <table cellpadding="2px">
+          <tr>
+            <td rowspan="1"><p class="content"><%= entry.content %></p></td>
+            <td>
+              <%= link_to image_tag('delete.png', size:"20", alt:"Delete"), message_path(entry),
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %>
+            </td>
+          </tr>
+          <tr>
+            <td><p class="time">Created at: <%= entry.created_at %></p></td>
+            <td><%= link_to image_tag('edit.png', size:"20", alt:"Delete"), edit_message_path(entry) %></td>
+          </tr>
+        </table>
+      </div></td>
+      <td align="middle"><img src="/assets/Doum_Logo_Red.png" width="30px" height="30px"/></td>
+    </tr>
+    </table>
+    <%else%>
+    <table align="center" width="100%" cellpadding="5px" class="post">
+      <tr>
+        <td align="middle"> <img src="/assets/Effat.png" width="30px" height="30px"/></td>
+        <td><div class="rPost">
+        <table cellpadding="2px">
+          <tr>
+            <td rowspan="1"><p class="content"><%= entry.content %></p></td>
+            <td>
+              <%= link_to image_tag('delete.png', size:"20", alt:"Delete"), message_path(entry),
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %>
+            </td>
+          </tr>
+          <tr>
+            <td><p class="time">Created at: <%= entry.created_at %></p></td>
+            <td><%= link_to image_tag('edit.png', size:"20", alt:"Delete"), edit_message_path(entry) %></td>
+          </tr>
+        </table>
+      </div></td>
+    </tr>
+    </table>
+    <%  end %>
+    <% end %>
+  </div>
+</div>

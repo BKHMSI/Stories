@@ -1,0 +1,41 @@
+<div class="header">
+  <div class="container">
+    <img src="/assets/Doum_Logo.png" alt="Doum Logo">
+    <h1>Story</h1>
+  </div>
+</div>
+
+
+  <div class="container">
+    <h1 style="text-align:center">Create Story</h1>
+    <%= form_for(@story) do |f| %>
+    <form>
+    <table width="50%" style="margin: 0 auto" align="center" border="0" cellpadding="5px" cellspacing=0>
+      <tr>
+        <td>
+          <label class="label-name">Title:</label>
+          <%= f.text_field :title %>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <label class="label-name">Image Link:</label>
+          <%= f.text_field :image %>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <label class="label-name">Description:</label>
+          <%= f.text_area :description, :maxlength => 200 %>
+        </td>
+      </tr>
+    </form>
+    <tr>
+      <td>
+        <span style="width: 20px"><%= f.submit "Create", :class => 'submitBtn'%></span>
+        <%=link_to "Cancel", "/stories"%>
+      </td>
+    </tr>
+    </table>
+    <% end %>
+  </div>

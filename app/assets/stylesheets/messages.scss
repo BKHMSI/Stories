@@ -1,0 +1,274 @@
+// Place all the styles related to the Story controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+html, body, p {
+  margin: 0;
+}
+
+body {
+  background-color: #eee;
+  font-family: 'Roboto', sans-serif;
+}
+
+.header {
+  background-color: #f2580b;
+  box-shadow: 0px 2px 5px rgba(0,0,0,0.15);
+  height: 100px;
+  text-align: center;
+}
+
+
+.header h1 {
+  text-indent: -9999px;
+}
+
+h1, h4{
+  width: 22%;
+  margin: 40px auto;
+}
+
+.container {
+  width: 500px;
+  margin: 0 auto;
+}
+
+.story, .create {
+  margin: 40px 0;
+}
+
+.add a, .actions a,
+.create .actions input {
+  background-color: #f2580b;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  font-size: 14px;
+  margin-top: 10px;
+  padding: 12px 24px;
+  transition: background-color 0.5s;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.post{
+  position: relative;
+}
+
+#profileImg{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.rPost {
+  background-color: #fff;
+  font-weight: 300;
+  padding: 20px;
+  float: right;
+  margin-bottom: 20px;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+  border-bottom-right-radius: 40px;
+}
+
+a{text-decoration: none;}
+
+.lPost{
+  background-color: #fff;
+  font-weight: 300;
+  padding: 20px;
+  margin-bottom: 20px;
+  float: left;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+  border-bottom-left-radius: 40px;
+}
+
+p.time {
+  color: #0084d7;
+  font-size: 12px;
+  margin-top: 12px;
+}
+
+button {
+  background-color: #f2580b;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  font-size: 14px;
+  margin-top: 10px;
+  padding: 12px 24px;
+  transition: background-color 0.5s;
+}
+
+#login{
+  background-color: orange;
+  float:right;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  height: 100px;
+  width: 5%;
+  padding: 0 24px;
+}
+
+#login div{
+  margin-top: 35px;
+  color: white;
+}
+
+a:visited{
+  text-decoration: none;
+  color:white;
+}
+
+
+button:hover {
+  background-color: #c24609;
+  transition: background-color 0.5s;
+}
+
+form label {
+  display: block;
+  width: 100%;
+}
+
+form textarea {
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  margin: 20px 0 10px;
+  min-height: 150px;
+  padding: 16px;
+  transition: border 0.5s;
+  width: 100%;
+  -webkit-box-shadow: rgb(221, 221, 221) 0px 1px 3px 0px inset;
+  -webkit-transition-delay: 0s;
+  -webkit-transition-duration: 0.3s;
+  -webkit-transition-property: border;
+  -webkit-transition-timing-function: linear;
+  border-bottom-color: rgb(204, 204, 204);
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-left-color: rgb(204, 204, 204);
+  border-left-style: solid;
+  border-left-width: 1px;
+  border-right-color: rgb(204, 204, 204);
+  border-right-style: solid;
+  border-right-width: 1px;
+  border-top-color: rgb(204, 204, 204);
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  box-shadow: rgb(221, 221, 221) 0px 1px 3px 0px inset;
+  box-sizing: border-box;
+  display: block;
+  letter-spacing: normal;
+  line-height: normal;
+  transition-delay: 0s;
+  transition-duration: 0.3s;
+  transition-property: border;
+  transition-timing-function: linear;
+  vertical-align: baseline;
+}
+
+form textarea:focus {
+  border: 1px solid #0084d7;
+  box-shadow: 0;
+  outline: 0;
+  transition: border 0.5s;
+}
+
+.add{
+  align:center;
+  width:12.9%;
+  margin: 40px auto;
+}
+
+.add a{
+}
+
+.lPost td a, .rPost td a{
+  float: right;
+}
+
+.txtBox, form input{
+  -webkit-box-shadow: rgb(221, 221, 221) 0px 1px 3px 0px inset;
+  -webkit-transition-delay: 0s;
+  -webkit-transition-duration: 0.3s;
+  -webkit-transition-property: border;
+  -webkit-transition-timing-function: linear;
+  border-bottom-color: rgb(204, 204, 204);
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-left-color: rgb(204, 204, 204);
+  border-left-style: solid;
+  border-left-width: 1px;
+  border-right-color: rgb(204, 204, 204);
+  border-right-style: solid;
+  border-right-width: 1px;
+  border-top-color: rgb(204, 204, 204);
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  box-shadow: rgb(221, 221, 221) 0px 1px 3px 0px inset;
+  box-sizing: border-box;
+  color: rgb(0, 0, 0);
+  display: block;
+  font-family: sans-serif;
+  font-size: 13px;
+  height: 40px;
+  letter-spacing: normal;
+  line-height: normal;
+  margin-bottom: 3.200000047683716px;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-top: 3.200000047683716px;
+  padding-bottom: 6px;
+  padding-left: 7px;
+  padding-right: 7px;
+  padding-top: 6px;
+  text-rendering: auto;
+  transition-delay: 0s;
+  transition-duration: 0.3s;
+  transition-property: border;
+  transition-timing-function: linear;
+  vertical-align: baseline;
+  width: 350px;
+  word-spacing: 0px;
+  position: relative;
+}
+
+.label-name{
+color: rgb(119, 119, 119);
+display: block;
+font-family: proxima-nova, sans-serif;
+font-size: 14px;
+height: 17px;
+letter-spacing: normal;
+margin-bottom: 3.5999999046325684px;
+margin-left: 0px;
+margin-right: 0px;
+margin-top: 3.5999999046325684px;
+text-rendering: auto;
+word-spacing: 0px;
+}
+
+
+@media screen and (max-width: 480px) {
+    .container {
+      width: 100%;
+      margin: 0 auto;
+    }
+
+    .story, .create {
+      padding: 0 20px;
+    }
+}

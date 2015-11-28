@@ -1,0 +1,35 @@
+<div class="header">
+  <div id="login">
+    <div><%= link_to 'Log In', "/login" %></div>
+  </div>
+  <div class="container">
+    <img src="/assets/Doum_Logo.png" alt="Doum Logo">
+    <h1>Story</h1>
+  </div>
+</div>
+
+<div class="story">
+  <div class="container">
+    <table align="center" width="100%" cellpadding="5px" class="post">
+      <tr>
+        <td>
+          <div class="lPost">
+          <table cellpadding="2px">
+            <tr>
+              <td rowspan="1"><p class="content"><%= @message.content %></p></td>
+              <td>
+                <%= link_to image_tag('delete.png', size:"20", alt:"Delete"), message_path(@message),
+                method: :delete,
+                data: { confirm: 'Are you sure?' } %>
+              </td>
+            </tr>
+            <tr>
+              <td><p class="time">Created at: <%= @message.created_at %></p></td>
+              <td><%= link_to image_tag('edit.png', size:"20", alt:"Delete"), edit_message_path(@message) %></td>
+            </tr>
+          </table>
+        </div></td>
+      </tr>
+    </table>
+  </div>
+</div>
